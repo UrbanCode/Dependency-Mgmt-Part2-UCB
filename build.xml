@@ -1,0 +1,40 @@
+<project name="HelloWorldPrinter" default="dist" basedir=".">
+    <!--
+        PROPERTIES
+    -->
+    <property name="project.name" value="${ant.project.name}"/>
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="build.classes.dir" value="${build.dir}/classes"/>
+    <property name="dist.dir" value="dist"/>
+
+    <!--
+        BASE TARGETS
+    -->
+    <target name="dist" depends="compile, dist-main"/>
+    <target name="compile" depends="compile-main"/>
+
+    <!--
+        MAIN TARGETS
+    -->
+    <target name="dist-main" depends="compile-main">
+        <jar destfile="${dist.dir}/${project.name}.jar" basedir="${build.classes.dir}"/>
+    </target>
+
+    <target name="compile-main" depends="clean">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.classes.dir}" includeantruntime="false"/>
+    </target>
+
+    <!--
+        CLEAN TARGETS
+    -->
+    <target name="clean">
+        <delete dir="${build.dir}" failonerror="false"/>
+    </target>
+
+    <target name="clean-all" depends="clean">
+        <delete dir="${dist.dir}" failonerror="false"/>
+    </target>
+</project>
