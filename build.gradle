@@ -1,2 +1,7 @@
 apply plugin: 'java'
 defaultTasks 'jar'
+
+version="1.0-SNAPSHOT"
+if (hasProperty('newVersion')) {
+    version = newVersion
+}

@@ -7,6 +7,7 @@
     <property name="build.dir" value="build"/>
     <property name="build.classes.dir" value="${build.dir}/classes"/>
     <property name="dist.dir" value="dist"/>
+    <property name="version" value="dev"/>
 
     <!--
         BASE TARGETS
@@ -18,7 +19,7 @@
         MAIN TARGETS
     -->
     <target name="dist-main" depends="compile-main">
-        <jar destfile="${dist.dir}/${project.name}.jar" basedir="${build.classes.dir}"/>
+        <jar destfile="${dist.dir}/${project.name}-${version}.jar" basedir="${build.classes.dir}"/>
     </target>
 
     <target name="compile-main" depends="clean">

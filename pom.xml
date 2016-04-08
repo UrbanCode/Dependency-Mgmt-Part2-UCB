@@ -4,7 +4,7 @@
   <groupId>com.ibm.urbancode</groupId>
   <artifactId>HelloWorldPrinter</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
   <name>Hello World Printer</name>
   <url>https://github.com/IBM-UrbanCode/Dependencies-HelloWorldPrinter</url>
 </project>
