@@ -1,4 +1,4 @@
-# Hello World: Dependency Management without dependencies.xml
+# Hello World: Dependency Management Part 2 - IBM UrbanCode Build
 A simple project that has a method for printing out `Hello World`. This project is used to demonstrate dependency management without a dependencies.xml in an IBM UrbanCode Build plug-in.
 
 ## Building the Project
