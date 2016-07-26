@@ -47,3 +47,6 @@ You can optionally pass in the `newVersion` property specify a version for the b
 gradle -PnewVersion=1.0 jar
 ```
 will produce a `HelloWorldPrinter-1.0.jar` file.
+
+### License
+This plugin is protected under the [Eclipse Public 1.0 License](http://www.eclipse.org/legal/epl-v10.html)
